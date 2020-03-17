@@ -1,0 +1,104 @@
+body {
+		margin: 0; 
+		padding: 0; 
+		width: 100%; 
+		height: 100%; 
+		overflow: hidden;
+	}
+
+img {
+		width: 100%; 
+		height: 100%; 
+		position: absolute; 
+		left: 0; 
+		top: 0;
+	}	
+		
+	#haiku {
+		position: absolute;
+		height:15em;
+		width:25em;
+		box-sizing: border-box;
+		padding:11% 10%;
+		background-color: #FBEBFB;
+		box-shadow: 20px 20px 20px;
+		top: 20%;
+		left: 20%;
+		overflow: hidden;
+		color:#000;
+		font-family: 'Courier New', cursive;
+        font-size:1.6em;
+		z-index: 2;
+	}
+	
+a {
+		color: black;
+		text-decoration: none;
+	}
+	
+	a:hover {color: white;}
+ 
+	a.dymek span {
+		display: none;
+		width: 330px;
+		z-index: 3;
+		padding: 0 5px;
+		text-align: left;
+		font-family: 'Courier New', cursive;
+		position: absolute;
+		top: 5%;
+		left: 8%; 
+		background:#FBEBFB;	
+		color:#000;
+}
+
+	a.dymek:hover span{
+		display: inline;
+}
+
+	#papa {
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		bottom: 9%;
+		right: 5%;
+		text-align: center;
+		color: black;
+		font-size: 1.3em;
+	}
+	
+	#pytaj {
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: 3%;
+		left: 3%;
+		text-align: center;
+		color: black;
+		font-size: 1.1em;
+	}
+		
+	#pytaj:hover {color: white}
+		
+	#list {
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: 1%;
+		right: 6%;
+		text-align: center;
+		color: black;
+		font-size: 1.1em;
+	}	
+	
+	#start {
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		bottom: 7%;
+		left: 3%;
+		text-align: center;
+		color: black;
+		font-size: 1em;
+		
+	}	

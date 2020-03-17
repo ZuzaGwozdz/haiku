@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico">
+    <title>haiku.generator</title>
+
+    <style>
+	
+	@media all and (max-device-width:750px) {
+		div#buzia { top: 40%; left: 35%;
+		}
+		div#papa { top: 30%; left: 40%;
+		}
+	}	
+		
+	body {
+		margin: 0; 
+		padding: 0; 
+		width: 100%; 
+		height: 100%; 
+		overflow: hidden;
+		background:#FBEBFB;
+	}
+	
+	#buzia {
+		position: absolute;
+		width: 300;
+		height: 300;
+		border-radius: 50%;
+		top: 27%;
+		left: 55%;
+		border: 1px;
+		background: pink;
+	}	
+	
+	#papa {
+		position: absolute;
+		width: 100;
+		height: 10;
+		left: 25%;
+		top: 27%;
+		color:#000;
+		font-family: 'Courier New', cursive;
+        font-size:2.5em;
+	}	
+		
+    </style>
+</head>
+
+ <body>
+	<script>
+		function zmienNaglowek1() {
+			document.getElementById("papa").innerHTML = "Do zobaczenia!";
+		}
+		function zmienNaglowek2() {
+			document.getElementById("papa").innerHTML = "Dziękuję";
+		}
+	</script>		
+	<div id="papa" onmouseover="zmienNaglowek1()" onmouseout="zmienNaglowek2()"> Dziękuję </div>
+		<a href="start.html">
+	<div id="buzia">
+		<canvas onmouseover=
+				"zawartosc.clearRect(0, 0, canvas.width, canvas.height)
+				zawartosc.beginPath();
+				zawartosc.moveTo(92,112.5);
+				zawartosc.lineTo(117,112.5);
+				zawartosc.stroke();
+				zawartosc.moveTo(182,112.5);
+				zawartosc.lineTo(207,112.5);
+				zawartosc.stroke();
+				zawartosc.moveTo(207.75,170);
+				zawartosc.arc(150,170,57.75,0,1*Math.PI)
+				zawartosc.moveTo(285,150);
+				zawartosc.arc(150,150,135,0,2*Math.PI);
+				zawartosc.stroke();"
+				onmouseout=
+				"zawartosc.clearRect(0, 0, canvas.width, canvas.height);
+				zawartosc.beginPath();
+				zawartosc.arc(105,112.5,11.25,0,2*Math.PI);
+				zawartosc.fill();
+				zawartosc.moveTo(195,112.5);
+				zawartosc.arc(195,112.5,11.25,0,2*Math.PI);
+				zawartosc.fill();
+				zawartosc.moveTo(207.75,170);
+				zawartosc.arc(150,170,57.75,0,1*Math.PI);
+				zawartosc.moveTo(285,150);
+				zawartosc.arc(150,150,135,0,2*Math.PI);
+				zawartosc.stroke();"
+		id="canvas" width="300" height="300">
+		
+		Twoja przeglądarka nie obsługuje elementu canvas</canvas>
+
+			<script>
+				var kontener = document.getElementById("canvas");
+				var zawartosc = kontener.getContext("2d");
+				zawartosc.beginPath();
+				zawartosc.arc(105,112.5,11.25,0,2*Math.PI);
+				zawartosc.fill();
+				zawartosc.moveTo(195,112.5);
+				zawartosc.arc(195,112.5,11.25,0,2*Math.PI);
+				zawartosc.fill();
+				zawartosc.moveTo(207.75,170);
+				zawartosc.arc(150,170,57.75,0,1*Math.PI);
+				zawartosc.moveTo(285,150);
+				zawartosc.arc(150,150,135,0,2*Math.PI);
+				zawartosc.stroke();
+			</script>
+	</div>
+</a>	
+</body>
+</html>

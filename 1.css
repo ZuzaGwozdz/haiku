@@ -1,0 +1,121 @@
+	html {
+	height: 100%;
+	}
+	
+	body {
+	margin: 0; 
+	padding: 0; 
+	width: 100%; 
+	height: 100%; 
+	overflow: hidden;
+	background-color: #FBEBFB;
+	}
+
+	
+	 #perspektywa {
+        width:100px;
+        height:100px;
+        margin:0 auto;
+		position:absolute;
+		top:40%;
+		left:45%;
+        perspective:300px;
+        -webkit-perspective:300px;
+		z-index:2
+      }
+
+      #rodzic {
+        width:100%;
+        height:100%;
+        position:relative;
+        transform-style:preserve-3d;
+        -webkit-transform-style:preserve-3d;
+        animation:obrot 6s linear infinite;
+        -webkit-animation:obrot 6s linear infinite;
+      }
+
+      #rodzic > div {
+        width:100%;
+        height:100%;
+        position:absolute;
+        background: pink;
+		border: 1px solid black;
+      }
+
+      #przod {
+        transform:translateZ(50px);
+        -webkit-transform:translateZ(50px);
+      }
+
+      #tyl {
+        transform:translateZ(-50px);
+        -webkit-transform:translateZ(-50px);
+      }
+
+      #lewo {
+        transform:rotateY(-90deg) translateZ(50px);
+        -webkit-transform:rotateY(-90deg) translateZ(50px);
+      }
+
+      #prawo {
+        transform:rotateY(90deg) translateZ(50px);
+        -webkit-transform:rotateY(90deg) translateZ(50px);
+      }
+
+      #gora {
+        transform:rotateX(-90deg) translateZ(50px);
+        -webkit-transform:rotateX(-90deg) translateZ(50px);
+      }
+
+      #dol {
+        transform:rotateX(90deg) translateZ(50px);
+        -webkit-transform:rotateX(90deg) translateZ(50px);
+      }
+
+      #rodzic > div > div {
+        position:absolute;
+        width:20px;
+        height:20px;
+        background-color: #FBEBFB;
+        border-radius:25%;
+        border: 1px black inset;
+      }
+
+      #przod > div:nth-child(1) { left:40px; top:40px; }
+
+      #tyl > div:nth-child(1) { left:10px; top:10px; }
+      #tyl > div:nth-child(2) { left:70px; bottom:10px; }
+
+      #lewo > div:nth-child(1) { left:10px; top:10px; }
+      #lewo > div:nth-child(2) { left:40px; top:40px; }
+      #lewo > div:nth-child(3) { left:70px; bottom:10px; }
+
+      #prawo > div:nth-child(1) { left:10px; top:10px; }
+      #prawo > div:nth-child(2) { left:70px; top:10px; }
+      #prawo > div:nth-child(3) { left:70px; bottom:10px; }
+      #prawo > div:nth-child(4) { left:10px; bottom:10px; }
+
+      #gora > div:nth-child(1) { left:10px; top:10px; }
+      #gora > div:nth-child(2) { left:70px; top:10px; }
+      #gora > div:nth-child(3) { left:70px; bottom:10px; }
+      #gora > div:nth-child(4) { left:10px; bottom:10px; }
+      #gora > div:nth-child(5) { left:40px; top:40px; }
+
+      #dol > div:nth-child(1) { left:10px; top:10px; }
+      #dol > div:nth-child(2) { left:70px; top:10px; }
+      #dol > div:nth-child(3) { left:10px; top:40px; }
+      #dol > div:nth-child(4) { left:70px; top:40px; }
+      #dol > div:nth-child(5) { left:70px; bottom:10px; }
+      #dol > div:nth-child(6) { left:10px; bottom:10px; }
+
+      @keyframes obrot
+      {
+        0% { transform:rotateX(0) rotateZ(0); }
+        100% { transform:rotateX(360deg) rotateZ(360deg); }
+      }
+
+      @-webkit-keyframes obrot
+      {
+        0% { -webkit-transform:rotateX(0) rotateZ(0); }
+        100% { -webkit-transform:rotateX(360deg) rotateZ(360deg); }
+      }
